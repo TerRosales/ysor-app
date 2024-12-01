@@ -8,60 +8,60 @@ type Props = {};
 const MainButton = (props: Props) => {
   return (
     <div className="container">
-      <a href="#" className="button">
-        <div className="button__content">
-          <span className="button__text">Download</span>
+      <Link href="/sign-in" className="button">
+        <div className="button-content">
+          <span className="button-text">Launch App</span>
           <FaSpaceAwesome />
 
-          <div className="button__reflection-1"></div>
-          <div className="button__reflection-2"></div>
+          <div className="button-reflection-1"></div>
+          <div className="button-reflection-2"></div>
         </div>
 
         <Image
           src="/assets/star.png"
           alt=""
-          className="button__star-1"
+          className="button-star-1"
           width={150}
           height={150}
         />
         <Image
-          src="/assets/star.png"
+          src="/assets/planet-2.png"
           alt=""
-          className="button__star-2"
+          className="button-star-2"
           width={150}
           height={150}
         />
         <Image
-          src="/assets/circle.png"
+          src="/assets/dronebot.png"
           alt=""
-          className="button__circle-1"
+          className="button-circle-1"
           width={150}
           height={150}
         />
         <Image
-          src="/assets/circle.png"
+          src="/assets/planet.png"
           alt=""
-          className="button__circle-2"
+          className="button-circle-2"
           width={150}
           height={150}
         />
         <Image
-          src="/assets/diamond.png"
+          src="/assets/space-trooper.png"
           alt=""
-          className="button__diamond"
+          className="button-spacetrooper"
           width={150}
           height={150}
         />
         <Image
-          src="/assets/triangle.png"
+          src="/assets/spaceship.png"
           alt=""
-          className="button__triangle"
+          className="button-triangle"
           width={150}
           height={150}
         />
 
-        <div className="button__shadow"></div>
-      </a>
+        <div className="button-shadow"></div>
+      </Link>
     </div>
   );
 };

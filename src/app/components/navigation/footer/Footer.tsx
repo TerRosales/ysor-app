@@ -4,16 +4,16 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto px-4 grid gap-8 md:grid-cols-3">
+    <footer className="bg-neutral-950 text-white h-[25%]">
+      <div className="p-8 md:p-8 mx-auto grid gap-6 lg:grid-cols-3">
         {/* Logo Section */}
-        <div className="flex flex-col items-start">
-          <h1 className="text-xl font-bold mb-2">MyLogo</h1>
+        <div className="flex flex-col md:items-start">
+          <h1 className="text-xl font-bold mb-2 text-left">LOGO</h1>
         </div>
 
         {/* Links Section */}
-        <div className="flex flex-col md:flex-row justify-between gap-8">
-          <div>
+        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-0">
+          <div className="text-left">
             <h2 className="font-semibold mb-2">Quick Links</h2>
             <ul className="space-y-1">
               <li>
@@ -23,17 +23,17 @@ const Footer = (props: Props) => {
               </li>
               <li>
                 <a href="#" className="text-sm hover:underline">
-                  About Us
+                  About The App
                 </a>
               </li>
               <li>
                 <a href="#" className="text-sm hover:underline">
-                  Services
+                  Use Cases
                 </a>
               </li>
             </ul>
           </div>
-          <div>
+          <div className="text-left">
             <h2 className="font-semibold mb-2">Resources</h2>
             <ul className="space-y-1">
               <li>
@@ -56,7 +56,7 @@ const Footer = (props: Props) => {
         </div>
 
         {/* Newsletter Section */}
-        <div className="flex flex-col">
+        <div className="flex flex-col text-left">
           <h2 className="font-semibold mb-2">Subscribe to our Newsletter</h2>
           <form className="flex flex-col sm:flex-row gap-2">
             <input
@@ -68,13 +68,13 @@ const Footer = (props: Props) => {
               type="submit"
               className="bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600 transition"
             >
-              Subscribe
+              Get Access
             </button>
           </form>
         </div>
       </div>
-      <p className="text-sm text-center my-7 sm:my-8">
-        © {new Date().getFullYear()} MyCompany. All rights reserved.
+      <p className="text-sm text-center py-6 sm:py-8">
+        © {new Date().getFullYear()} Ysor App. All rights reserved.
       </p>
     </footer>
   );

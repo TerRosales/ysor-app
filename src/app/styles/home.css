@@ -27,10 +27,10 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --gradient-color: linear-gradient(
     90deg,
-    hsl(48, 100%, 50%) 0%,
-    hsl(28, 100%, 54%, 100%)
+    hsl(253, 51%, 25%) 0%,
+    hsl(336, 86%, 39%)
   );
-  --black-color: hsl(225, 15%, 6%);
+  --black-color: hsl(0, 0%, 0%);
   --reflection-color: hsla(48, 30%, 95%, 0.3);
   --body-color: hsl(48, 100%, 98%);
 
@@ -70,10 +70,10 @@ a {
   transition: transform 0.4s;
 }
 
-.button__content {
+.button-content {
   position: relative;
   background: var(--gradient-color);
-  padding: 1.25rem 3rem;
+  padding: 1.25rem 2.5rem;
   border-radius: 4rem;
   border: 3px solid var(--black-color);
   color: var(--black-color);
@@ -83,23 +83,23 @@ a {
   overflow: hidden;
 }
 
-.button__text {
+.button-text {
   font-weight: 700;
 }
 
-.button__icon {
+.button-icon {
   font-size: 1.5rem;
 }
 
-.button__text,
-.button__icon {
+.button-text,
+.button-icon {
   position: relative;
   z-index: 2;
 }
 
 /* Reflection shapes */
-.button__reflection-1,
-.button__reflection-2 {
+.button-reflection-1,
+.button-reflection-2 {
   width: 8px;
   height: 120px;
   background-color: var(--reflection-color);
@@ -112,7 +112,7 @@ a {
   transition: left 0.6s cubic-bezier(0.2, 0.5, 0.2, 1.2);
 }
 
-.button__reflection-1::after {
+.button-reflection-1::after {
   content: "";
   width: 26px;
   height: 100%;
@@ -122,7 +122,7 @@ a {
   left: 1.25rem;
 }
 
-.button__reflection-2::after {
+.button-reflection-2::after {
   content: "";
   width: 40px;
   height: 100%;
@@ -139,45 +139,49 @@ a {
   transition: transform 0.5s, opacity 0.5s;
 }
 
-.button__star-1 {
-  width: 20px;
+.button-star-1 {
+  width: 30px;
   top: -14px;
   left: -16px;
   transform: rotate(48deg) scale(0.1);
 }
 
-.button__star-2 {
-  width: 40px;
-  right: -10px;
-  top: -4px;
+.button-star-2 {
+  width: 50px;
+  right: -28px;
+  top: -12px;
   transform: rotate(-48deg) scale(0.1);
 }
 
-.button__circle-1,
-.button__circle-2 {
-  width: 8px;
+.button-circle-1 {
+  width: 30px;
+  left: -18px;
+}
+.button-circle-2 {
+  width: 12px;
 }
 
-.button__circle-1 {
+.button-circle-1 {
   top: -8px;
   left: 58px;
   transform: scale(0.1);
 }
 
-.button__circle-2 {
-  right: 34px;
+.button-circle-2 {
+  width: 20px;
+  right: 24px;
   bottom: -8px;
+  transform: scale(0.5);
+}
+
+.button-spacetrooper {
+  width: 40px;
+  top: -38px;
+  right: 42px;
   transform: scale(0.1);
 }
 
-.button__diamond {
-  width: 18px;
-  top: -18px;
-  right: 62px;
-  transform: scale(0.1);
-}
-
-.button__triangle {
+.button-triangle {
   width: 30px;
   left: 15px;
   bottom: -16px;
@@ -185,7 +189,7 @@ a {
 }
 
 /* Gradient shadow */
-.button__shadow {
+.button-shadow {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -200,16 +204,16 @@ a {
 }
 
 /* View shadow gradient */
-.button:hover .button__shadow {
+.button:hover .button-shadow {
   transform: translate(-0.5rem, 0.5rem);
 }
 
 /* Move reflection */
-.button:hover .button__reflection-1 {
+.button:hover .button-reflection-1 {
   left: 120%;
 }
 
-.button:hover .button__reflection-2 {
+.button:hover .button-reflection-2 {
   left: -70%;
 }
 
@@ -222,28 +226,28 @@ a {
   opacity: 1;
 }
 
-.button:hover .button__star-1 {
+.button:hover .button-star-1 {
   transform: scale(1.1);
   transition-delay: 0.1s;
 }
 
-.button:hover .button__star-2 {
+.button:hover .button-star-2 {
   transform: scale(1.1);
 }
 
-.button:hover .button__circle-1 {
+.button:hover .button-circle-1 {
   transform: translateY(-8px) scale(1.1);
   transition-delay: 0.1s;
 }
 
-.button:hover .button__circle-2 {
+.button:hover .button-circle-2 {
   transform: translate(-20px, 20px) scale(1.1);
 }
 
-.button:hover .button__diamond {
+.button:hover .button-spacetrooper {
   transform: translateY(7px) rotate(-24deg) scale(1.1);
 }
 
-.button:hover .button__triangle {
+.button:hover .button-triangle {
   transform: rotate(-12deg) scale(1.1);
 }

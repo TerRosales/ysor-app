@@ -1,0 +1,253 @@
+.sign-in {
+  background-image: url("/assets/space-2.jpg");
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  position: relative; /* Required for the overlay */
+}
+
+.image-container {
+  position: absolute;
+  width: 95%;
+  height: 80%;
+}
+
+.spaceship {
+  position: absolute;
+  z-index: 0;
+  top: 10%;
+  right: 20%;
+}
+
+.space-trooper {
+  position: absolute;
+  z-index: 0;
+  top: -4%;
+  left: 30%;
+}
+
+.planet {
+  position: absolute;
+  z-index: 20;
+  bottom: 12%;
+  right: 30%;
+}
+
+.dronebot {
+  position: absolute;
+  z-index: 20;
+  bottom: 22%;
+  left: 22%;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+/* Media Querries */
+@media (max-width: 1440px) {
+  .spaceship {
+    top: 10%;
+    right: 23%;
+  }
+
+  .space-trooper {
+    top: -4%;
+    left: 24%;
+  }
+
+  .planet {
+    bottom: 10%;
+    right: 28%;
+  }
+
+  .dronebot {
+    bottom: 2%;
+    left: 24%;
+  }
+}
+@media (max-width: 1024px) {
+  .spaceship {
+    top: 8%;
+    right: 12%;
+  }
+
+  .space-trooper {
+    top: -4%;
+    left: 12%;
+  }
+
+  .planet {
+    bottom: 6%;
+    right: 17%;
+  }
+
+  .dronebot {
+    bottom: 4%;
+    left: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .spaceship {
+    top: 10%;
+    right: 2%;
+  }
+
+  .space-trooper {
+    top: -4%;
+    left: -2%;
+  }
+
+  .planet {
+    bottom: 2%;
+    right: 5%;
+  }
+
+  .dronebot {
+    bottom: 2%;
+    left: 2%;
+  }
+}
+@media (max-width: 425px) {
+  .sign-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .image-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+  }
+
+  .image-container img {
+    position: absolute;
+    transform: translate(5%, 5%);
+  }
+
+  .spaceship {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: center;
+    justify-self: center;
+    transform: translate(0, 0) rotate(0);
+  }
+
+  .space-trooper {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    transform: translate(0, 0) rotate(0);
+  }
+
+  .planet {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    transform: translate(0, 0) rotate(0);
+  }
+
+  .dronebot {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    align-self: center;
+    justify-self: center;
+    transform: translate(0, 0) scaleX(1);
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes float-spaceship {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translate(-5px, -10px) rotate(-1deg) scale(1.03);
+  }
+  50% {
+    transform: translate(5px, 10px) rotate(2deg) scale(1.02);
+  }
+  80% {
+    transform: translate(-2px, -5px) rotate(-1deg) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes float-space-trooper {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(10px, -5px) rotate(1deg) scale(1.04);
+  }
+  50% {
+    transform: translate(-10px, 5px) rotate(-2deg) scale(1);
+  }
+  75% {
+    transform: translate(5px, -5px) rotate(2deg) scale(1.03);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes float-planet {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  15% {
+    transform: translate(-8px, 5px) rotate(-2deg) scale(1.01);
+  }
+  50% {
+    transform: translate(8px, -5px) rotate(2deg) scale(1.05);
+  }
+  85% {
+    transform: translate(-5px, 8px) rotate(-1deg) scale(1.03);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes float-dronebot {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  10% {
+    transform: translate(5px, -10px) rotate(1deg) scale(1.02);
+  }
+  40% {
+    transform: translate(-10px, 5px) rotate(-2deg) scale(1.04);
+  }
+  70% {
+    transform: translate(8px, -5px) rotate(2deg) scale(1.01);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+.spaceship {
+  animation: float-spaceship 6s ease-in-out infinite;
+}
+
+.space-trooper {
+  animation: float-space-trooper 7s ease-in-out infinite;
+}
+
+.planet {
+  animation: float-planet 8s ease-in-out infinite;
+}
+
+.dronebot {
+  animation: float-dronebot 5s ease-in-out infinite;
+}
