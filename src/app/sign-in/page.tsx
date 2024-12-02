@@ -97,12 +97,20 @@ const SignInPage = () => {
               </button>
             </div>
           </div>
-          <button
+          {/* <button
             type="submit"
             className="w-full bg-purple-900 text-white py-2 rounded-md text-lg font-medium hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-800"
           >
             Log In
-          </button>
+          </button> */}
+          <Link href="/huddle-page">
+            <button
+              type="submit"
+              className="mt-4 w-full bg-purple-900 text-white py-2 rounded-md text-lg font-medium hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-800"
+            >
+              Log In
+            </button>
+          </Link>
           <section className="items-center">
             <button
               type="submit"

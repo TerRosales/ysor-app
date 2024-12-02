@@ -5,6 +5,17 @@
   position: relative; /* Required for the overlay */
 }
 
+.sign-in::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35); /* Black overlay with 60% opacity */
+  z-index: 0; /* Ensures it stays behind the content */
+}
+
 .image-container {
   position: absolute;
   width: 95%;
@@ -16,6 +27,8 @@
   z-index: 0;
   top: 10%;
   right: 20%;
+  width: auto;
+  height: auto;
 }
 
 .space-trooper {
@@ -23,6 +36,8 @@
   z-index: 0;
   top: -4%;
   left: 30%;
+  width: auto;
+  height: auto;
 }
 
 .planet {
@@ -30,6 +45,8 @@
   z-index: 20;
   bottom: 12%;
   right: 30%;
+  width: auto;
+  height: auto;
 }
 
 .dronebot {
@@ -39,6 +56,8 @@
   left: 22%;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+  width: auto;
+  height: auto;
 }
 /* Media Querries */
 @media (max-width: 1440px) {

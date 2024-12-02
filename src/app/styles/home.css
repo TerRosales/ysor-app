@@ -31,6 +31,7 @@
     hsl(336, 86%, 39%)
   );
   --black-color: hsl(0, 0%, 0%);
+  --black-color-2: hsl(0, 0%, 5%);
   --reflection-color: hsla(48, 30%, 95%, 0.3);
   --body-color: hsl(48, 100%, 98%);
 
@@ -75,7 +76,7 @@ a {
   background: var(--gradient-color);
   padding: 1.25rem 2.5rem;
   border-radius: 4rem;
-  border: 3px solid var(--black-color);
+  border: 3px solid var(--black-color-2);
   color: var(--black-color);
   display: flex;
   align-items: center;
@@ -198,7 +199,7 @@ a {
   background: var(--gradient-color);
   padding: 1.25rem 3rem;
   border-radius: 4rem;
-  border: 3px solid var(--black-color);
+  border: 3px solid var(--black-color-2);
   z-index: -1;
   transition: transform 0.3s;
 }
