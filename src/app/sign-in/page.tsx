@@ -17,6 +17,7 @@ const SignInPage = () => {
           height={170}
           alt="spaceship image"
           className="spaceship"
+          style={{ width: "auto", height: "auto" }}
         />
         <Image
           priority
@@ -25,6 +26,7 @@ const SignInPage = () => {
           height={220}
           alt="space trooper image"
           className="space-trooper"
+          style={{ width: "auto", height: "auto" }}
         />
         <Image
           src="/assets/planet-2.png"
@@ -32,6 +34,7 @@ const SignInPage = () => {
           height={120}
           alt="planet image"
           className="planet"
+          style={{ width: "auto", height: "auto" }}
         />
         <Image
           src="/assets/dronebot.png"
@@ -39,6 +42,7 @@ const SignInPage = () => {
           height={200}
           alt="dronebot image"
           className="dronebot"
+          style={{ width: "auto", height: "auto" }}
         />
       </div>
       <div className="z-10 w-full max-w-md bg-white shadow-lg rounded-lg p-6">

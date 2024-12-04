@@ -25,14 +25,14 @@ const MainButton = (props: Props) => {
           height={150}
         />
         <Image
-          src="/assets/planet-2.png"
+          src="/assets/space-trooper.png"
           alt=""
           className="button-star-2"
           width={150}
           height={150}
         />
         <Image
-          src="/assets/dronebot.png"
+          src="/assets/planet.png"
           alt=""
           className="button-circle-1"
           width={150}
@@ -46,13 +46,14 @@ const MainButton = (props: Props) => {
           height={150}
         />
         <Image
-          src="/assets/space-trooper.png"
+          src="/assets/dronebot.png"
           alt=""
           className="button-spacetrooper"
           width={150}
           height={150}
         />
         <Image
+          priority
           src="/assets/spaceship.png"
           alt=""
           className="button-triangle"
