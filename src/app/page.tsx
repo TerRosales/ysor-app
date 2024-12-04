@@ -1,6 +1,8 @@
 import "@/app/styles/home.css";
 import MainButton from "./components/utility-components/MainButton";
+import connectDB from "@/config/database";
 export default function Home() {
+  connectDB(); // Connect to MongoDB
   return (
     <div className="home-main h-[90vh] pt-10">
       <section className="h-[20%]">
