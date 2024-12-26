@@ -38,14 +38,14 @@ const SignInPage = () => {
         />
         <Image
           src="/assets/dronebot.png"
-          width={200}
-          height={200}
+          width={195}
+          height={195}
           alt="dronebot image"
           className="dronebot"
           style={{ width: "auto", height: "auto" }}
         />
       </div>
-      <div className="z-10 w-full max-w-md bg-white shadow-lg rounded-lg p-6">
+      <div className="z-10 w-full max-w-md bg-white shadow-lg rounded-lg py-6 px-4">
         <h2 className="text-2xl font-semibold text-center text-purple-800 mb-4">
           Sign In
         </h2>
