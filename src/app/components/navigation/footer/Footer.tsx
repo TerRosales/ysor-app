@@ -8,7 +8,7 @@ const Footer = (props: Props) => {
       <div className="p-8 md:p-8 mx-auto grid gap-6 lg:grid-cols-3">
         {/* Logo Section */}
         <div className="flex flex-col md:items-start">
-          <h1 className="text-xl font-bold mb-2 text-left">LOGO</h1>
+          <h1 className="text-xl font-bold mb-2 text-left">LOasdasdGO</h1>
         </div>
 
         {/* Links Section */}
